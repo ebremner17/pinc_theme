@@ -1,0 +1,23 @@
+{% set section_names = {
+  1: 'first',
+  2: 'second',
+  3: 'third',
+  4: 'fourth',
+  5: 'fifth',
+} %}
+
+{% set section_classes = '' %}
+
+<section {{ attributes.addClass(classes) }}>
+
+  {% for i in 1..num_of_blocks %}
+
+    {% set section_name = section_names[loop.index] %}
+
+    <div {{ region_attributes[section_name].addClass('layout__region', 'layout__region--' ~ section_name) }}>
+      {{ content[section_name] }}
+    </div>
+
+  {% endfor %}
+
+</section>
