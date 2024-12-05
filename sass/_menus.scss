@@ -1,0 +1,43 @@
+.responsive-menus {
+  .primary-nav__menu-link {
+    font-size: 1rem;
+  }
+
+  .contextual {
+    display: none;
+  }
+}
+
+#block-players-theme-account-menu {
+  padding-left: 1rem;
+
+  @media screen and (min-width: 768px) {
+    padding-left: 2.25rem;
+  }
+}
+
+.primary-nav__menu-link-inner {
+  padding-bottom: 0.25rem !important;
+}
+
+.primary-nav__menu-link-inner::after {
+  border-top: solid 5px #2b5df8 !important;
+}
+
+@media screen and (min-width: 768px) {
+  #block-pinc-theme-main-menu {
+    ul {
+      list-style: none;
+
+      a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+      }
+
+      a:hover {
+        border-bottom: 3px solid Blue;
+      }
+    }
+  }
+}

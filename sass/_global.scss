@@ -1,0 +1,134 @@
+body {
+  background-image: none;
+  background-color: black;
+  font-family: metropolis, sans-serif;
+  line-height: 1.6875rem;
+}
+
+#page {
+  display: grid;
+
+  .players-header {
+    grid-row: 1 / 2;
+  }
+
+  .highlighted {
+    grid-row: 2 / 3;
+  }
+
+  #main-wrapper {
+    grid-row: 3 / 4;
+    min-height: 400px;
+  }
+
+  .players-footer {
+    grid-row: 4 / 5;
+  }
+}
+
+details {
+  padding: .5em .5em 0;
+}
+
+details:hover summary {
+  background-color: #4e4e4e;
+  background-image: url(../images/mobile-arrow-down-w.svg),linear-gradient(transparent,transparent);
+  color: white;
+}
+
+details[open] summary {
+  background-color: #4e4e4e;
+  background-image: url(../images/mobile-arrow-down-w.svg),linear-gradient(transparent,transparent);
+  color: white;
+}
+
+summary {
+  background-color: #eee;
+  background-image: url(../images/mobile-arrow-down.svg),linear-gradient(transparent,transparent);
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 13px;
+  color: black;
+  font-weight: bold;
+  margin: -.5em -.5em 0;
+  padding: .5em;
+}
+
+summary::after {
+  content: "";
+  display: block;
+  height: 1rem;
+  position: absolute;
+  right: 1rem;
+  top: calc(50% - .5rem);
+  width: 1rem;
+}
+
+details > summary {
+  list-style: none;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.grid-full {
+  display: block;
+}
+
+.main-content {
+  width: 100%;
+}
+
+.players-contained-width {
+  padding: 0.5rem;
+  max-width: 73rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.region--highlighted,
+#entity-view-display-layout-builder-form,
+.node-players-web-page-layout-builder-form,
+.block-page-title-block {
+  max-width: 73rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#callnowbutton {
+  background-color: #008A00;
+  color: #ffffff;
+  position: fixed;
+  bottom: 0;
+  z-index: 1000;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+    visibility: hidden;
+  }
+
+  &.cnb-full {
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 1px 0 rgba(0,0,0,.18);
+    width: 100%;
+    left: 0;
+    height: 60px;
+  }
+
+  &.cnb-text {
+    text-align: center;
+    color: #FFF;
+    font-weight: 600;
+    font-size: 120%;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  &.cnb-displaymode-mobile-only {
+    display: flex;
+    position: fixed;
+    text-decoration: none;
+  }
+}

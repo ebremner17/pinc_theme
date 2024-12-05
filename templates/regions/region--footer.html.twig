@@ -1,1 +1,28 @@
-This is the footer
+<div class="players-footer__wrapper">
+  <div class="players-footer__hours">
+    <span><u>Hours</u></span><br />
+    <strong>We will play until players want to play</strong><br />
+    Monday: Closed<br />
+    Tuesday - Thursday: Club opens at 6:30pm<br />
+    Friday/Saturday: Club opens at 6:00pm<br />
+    Sunday: Club opens at 6:30pm<br />
+  </div>
+  <div class="players-footer__address">
+    <span><u>Address</u></span><br />
+    Player's Inc.<br />
+    63 Mack Avenue<br />
+    Scarborough, ON<br />
+    <a href="tel:647-549-2036">647-549-2036</a><br />
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2884.4915011957146!2d-79.27262132337898!3d43.7003338710998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cf452ed9f505%3A0xab11e2fb6b7ead2e!2sPlayers%20inc%20Poker!5e0!3m2!1sen!2sca!4v1717090001966!5m2!1sen!2sca" width="300" height="225" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+  <div class="players-footer__login">
+    {% if logged_in %}
+      <a href="/user/logout">Logout</a>
+    {% else %}
+      <a href="/user">Login</a>
+    {% endif %}
+  </div>
+  <div class="players-footer__copyright">
+    Copyright © {{ 'now' | date('Y') }} PLAYER'S INC. /toronto aces poker club
+  </div>
+</div>
