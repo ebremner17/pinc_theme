@@ -1,7 +1,7 @@
 name: Players theme
 type: theme
 description: Theme for Player's Inc
-base theme: stable9
+base theme: olivero
 core_version_requirement: ^10
 
 libraries:
